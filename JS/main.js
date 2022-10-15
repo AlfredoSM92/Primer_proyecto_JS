@@ -28,7 +28,7 @@ function welcome(a, b) {
     }
   }
   
-  //welcome(userName, userAge)
+  welcome(userName, userAge)
 
   let seguir 
   let select
