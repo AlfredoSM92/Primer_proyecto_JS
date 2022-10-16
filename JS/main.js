@@ -1,5 +1,5 @@
-//const userName = prompt("Ingresa tu nombre");
-//let userAge = parseInt(prompt("Ingresa tu edad"));
+const userName = prompt("Ingresa tu nombre");
+let userAge = parseInt(prompt("Ingresa tu edad"));
 const carrito = []
 const stock = [
   { id: 1, name: "glicerina", price: 60 },
@@ -42,7 +42,7 @@ function welcome(a, b) {
       + "2. Jabón de caléndula (50 MXN)" + "\n"
       + "3. Jabón de avena (70 MXN)" + "\n" 
       + "4. Jabón de café (70MXN)"))
-      seguir=prompt("¿quieres añadir algo más?")
+      seguir=prompt("¿quieres añadir algo más? si/no")
     switch(select){
       case 1:
         select=stock.find((el) => el.name == "glicerina")
@@ -74,6 +74,6 @@ function welcome(a, b) {
 
   carrito.forEach((item) => {
     alert(`Tienes en tu carrito: ${item.name}`)
-    alert("tu total es de " + total)
   })
+  alert("tu total es de " + total)
   
