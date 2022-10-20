@@ -1,79 +1,36 @@
-const userName = prompt("Ingresa tu nombre");
-let userAge = parseInt(prompt("Ingresa tu edad"));
-const carrito = []
-const stock = [
-  { id: 1, name: "glicerina", price: 60 },
-  { id: 2, name: "caléndula", price: 50 },
-  { id: 3, name: "avena", pice: 70 },
-  { id: 4, name: "café", price: 70 }
-];
+carrito = []
 
+// Función de registro de usuario
+// const userValidation = () => {
+//     const userName = prompt("Ingresa tu nombre de usuario");
+//     let userAge = parseInt(prompt("Ingresa tu edad"));
+//     if (userAge >= 18) {
+//         Swal.fire(
+//             `¡Bienvenid@ ${userName}!`,
+//             'Disfruta mucho tu visita',
+//             'success'
+//         )
+//     } else {
+//         Swal.fire(
+//             `${userName}`,
+//             'Antes de comprar pide permiso a tus padres',
+//             'info'
+//         )
+//     }
+//     localStorage.setItem('username', userName);
+// }
 
-function welcome(a, b) {
-    if (b >= 18) {
-        Swal.fire({
-          title: `¡Bienvenid@ ${a}!`,
-          text: 'Disfruta tu visita',
-            icon: 'success',
-            confirmButtonText: 'Avanzar'
-          })
-          // alert(a + ", ¡bienvenid@ a Jabones Shaddai!");
-        } else {
-          Swal.fire({
-        title: `¡Bienvenid@ ${a}!`,
-        text: 'Antes de comprar pide permiso a tus padres',
-        icon: 'info',
-        confirmButtonText: 'Avanzar'
-      })
-    }
-  }
-  
-  welcome(userName, userAge)
+//userValidation ()
 
-  let seguir 
-  let select
-  let total= 0
-  
-  
-  function agregarACarrito(carrito){
-    do {
-      select = parseInt(prompt("Ingresa la opción que quieres agregar a tu carrito" + "\n"
-      + "1. Jabón de glicerina (60 MXN)" + "\n" 
-      + "2. Jabón de caléndula (50 MXN)" + "\n"
-      + "3. Jabón de avena (70 MXN)" + "\n" 
-      + "4. Jabón de café (70MXN)"))
-      seguir=prompt("¿quieres añadir algo más? si/no")
-    switch(select){
-      case 1:
-        select=stock.find((el) => el.name == "glicerina")
-        carrito.push(select)
-        total += 60
-        break
-      case 2:
-        select=stock.find((el) => el.name == "caléndula")
-        carrito.push(select)
-        total += 50
-        break
-        case 3:
-          select=stock.find((el) => el.name == "avena")
-          carrito.push(select)
-          total += 70
-          break
-          case 4:
-            select=stock.find((el) => el.name == "café")
-            carrito.push(select)
-            total +=70
-            break
-            default:
-              alert("ingresa una opción válida")
-            }
-          } while(seguir=="si")
-  }
-  agregarACarrito(carrito)
-  console.log(carrito)
+//Control de eventos en DOM
+let buttonsCart = document.querySelectorAll(".addToCart");
+buttonsCart.forEach((element) => {
+    element.addEventListener("click", identificacion);
+})
 
-  carrito.forEach((item) => {
-    alert(`Tienes en tu carrito: ${item.name}`)
-  })
-  alert("tu total es de " + total)
-  
+function identificacion(evento){
+    evento.preventDefault();
+    let object = evento.target.classList[1];
+    carrito.push(new merchandaise(object, 1))
+    console.log(carrito);
+}

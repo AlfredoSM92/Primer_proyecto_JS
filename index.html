@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/index.css">
-    <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script defer src="./JS/main.js"></script>
     <script src="https://kit.fontawesome.com/966ebc0f37.js" crossorigin="anonymous"></script>
+    <script defer src="./JS/stockClass.js"></script>
+    <script defe src="./JS/merchandiseClass.js"></script>
+    <script defer src="./JS/main.js"></script>
     <title>Proyecto Final - Alfredo Sánchez</title>
 </head>
 
@@ -17,19 +18,25 @@
         <div id="div__header">
             <img id="logo" src="./images/Logo.png" alt="Logo Jabones artesanales Shaddai">
             <h1 id="h1">Cuida tu salud y tu belleza</h1>
+            <div class="cart__menu">
+                <label for="cart_icon"><i class="fa-solid fa-cart-shopping"></i></label>
+                <input type="checkbox" name="" id="cart_icon">
+            </div>
         </div>
     </header>
-    <main>
-
-        <nav id="nav__list">
-            <ul>
-                <a href="#ocassional">
-                    <li class="nav__item">Toda ocasión</li>
-                </a>
-                <a href="#candies">
-                    <li class="nav__item">Dulces e inocentes</li>
-                </a>
-                <a href="#crhistmas">
+    
+</div>
+<main>
+    
+    <nav id="nav__list">
+        <ul>
+            <a href="#ocassional">
+                <li class="nav__item">Toda ocasión</li>
+            </a>
+            <a href="#candies">
+                <li class="nav__item">Dulces e inocentes</li>
+            </a>
+            <a href="#crhistmas">
                     <li class="nav__item">Navidad</li>
                 </a>
             </ul>
@@ -39,40 +46,40 @@
                 <img class="product__img" src="./images/ocasional1.jpg" alt="Jabón de glicerina">
                 <h2 class="subtitle">Jabón de glicerina</h2>
                 <p class="product__info">Jabón de glicerina con forma de rosa. <br>$60 MXN</p>
-                <button id="button__glicerina" class="addToCart">Agregar al carrito</button>
+                <button class="addToCart Glicerina">Agregar al carrito</button>
                 <!-- <input type="submit" class="addToCart"value="Agregar a carrito"> -->
             </div>
             <div class="product">
                 <img class="product__img" src="./images/ocasional2.jpg" alt="Jabón de glicerina">
                 <h2 class="subtitle">Jabón de caléndula</h2>
                 <p class="product__info">Vitamina E y aceite de caléndula transparente. <br>$50 MXN</p>
-                <button id="button__calendula" class="addToCart">Agregar al carrito</button>
+                <button class="addToCart Calendula">Agregar al carrito</button>
                 <!-- <input type="submit" class="addToCart" value="Agregar a carrito"> -->
             </div>
             <div class="product">
                 <img class="product__img" src="./images/ocasional3.jpg" alt="Jabón de glicerina">
                 <h2 class="subtitle">Jabón de avena</h2>
                 <p class="product__info">Con vitamina E, avena, aceite de almedras y leche. <br>$70 MXN</p>
-                <button id="button__avena" class="addToCart">Agregar al carrito</button>
+                <button class="addToCart Avena">Agregar al carrito</button>
             </div>
             <div class="product">
                 <img class="product__img" src="./images/ocasional4.jpg" alt="Jabón de glicerina">
                 <h2 class="subtitle">Jabón de café</h2>
                 <p class="product__info">Con vitamina E, avena, aceite de almedras y leche. <br>$70 MXN</p>
-                <button id="button__cafe" class="addToCart">Agregar al carrito</button>
+                <button class="addToCart Cafe">Agregar al carrito</button>
             </div>
-
+            
         </section>
         <section id="candies">
-
+            
         </section>
         <section id="christmas">
-
+            
         </section>
-
+        
         
     </main>
-
+    
     <section>
         <table>
             <thead>
@@ -92,6 +99,8 @@
             </tfoot>
         </table>
     </section>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="sweetalert2.all.min.js"></script> -->
 </body>
 
 </html>
