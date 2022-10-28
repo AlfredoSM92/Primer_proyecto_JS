@@ -1,8 +1,8 @@
 // Clase constructora para añadir más productos en el futuro.
 class merchandise {
-    constructor(nombre, precio){
-        this.nombre = nombre;
-        this.precio = precio;
+    constructor(name, price){
+        this.name = name;
+        this.price = price;
     }
 }
 

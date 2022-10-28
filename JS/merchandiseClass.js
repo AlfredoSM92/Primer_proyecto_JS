@@ -1,11 +1,11 @@
 //Clase encargada de elementos en carrito
 class Item {
-    constructor(merchandise, cantidad){
+    constructor(merchandise, amount){
         this.merchandise = merchandise;
-        this.cantidad = cantidad;
+        this.amount = amount;
     }
 
     total(){
-        return this.cantidad * this.item.precio
+        return this.amount * this.merchandise.price
     }
 }

@@ -40,16 +40,10 @@ function agregar() {
     console.log(carrito)
     let nameItem
     let itemCant
-    let itemPrice
     for (item of carrito) {
         nameItem = item.merchandise
-        itemCant = item.cantidad
+        itemCant = item.amount
     }
-
-    if (nameItem == merchandise.nombre) {
-        itemPrice = element.price
-    }
-    console.log(itemPrice)
 
     let table = document.getElementById("cart")
     let row = document.createElement("tr");
