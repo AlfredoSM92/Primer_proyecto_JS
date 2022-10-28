@@ -28,9 +28,55 @@ buttonsCart.forEach((element) => {
     element.addEventListener("click", identificacion);
 })
 
-function identificacion(evento){
+function identificacion(evento) {
     evento.preventDefault();
-    let object = evento.target.classList[1];
-    carrito.push(new merchandaise(object, 1))
-    console.log(carrito);
+    let element = evento.target.classList[1];
+    carrito.push(new Item(element, 1));
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+    agregar();
 }
+
+function agregar() {
+    console.log(carrito)
+    let nameItem
+    let itemCant
+    let itemPrice
+    for (item of carrito) {
+        nameItem = item.merchandise
+        itemCant = item.cantidad
+    }
+
+    if (nameItem == merchandise.nombre) {
+        itemPrice = element.price
+    }
+    console.log(itemPrice)
+
+    let table = document.getElementById("cart")
+    let row = document.createElement("tr");
+    let data = document.createElement("td");
+    data.innerHTML = `Jabón de ${nameItem}`;
+    row.append(data);
+
+    //Control celdas de cantidad
+    data = document.createElement("td");
+    let buttonLess = document.createElement("button"); //Boton disminuir cantidad
+    buttonLess.innerText = "-"
+    buttonLess.className = "less"
+
+    let buttonPlus = document.createElement("button");
+    buttonPlus.innerText = "+"
+    buttonPlus.className = "plus"
+    data.append(buttonLess)
+    data.append(itemCant)
+    data.append(buttonPlus)
+    row.append(data);
+
+    data = document.createElement("td");
+    row.append(data);
+
+    table.append(row);
+
+
+}
+
+//Control de botones de cantidad.

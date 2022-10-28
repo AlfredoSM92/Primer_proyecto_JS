@@ -172,6 +172,22 @@ td {
 }
 
 
-.test {
-    background-color: coral;
+.plus{
+    background-color: sandybrown;
+    font-size: 1.2rem;
+    width: 20px;
+    color: aliceblue;
+    cursor: pointer;
+    border: none;
+    margin-left: 1.5rem;
+}
+
+.less {
+    background-color: sandybrown;
+    font-size: 1.2rem;
+    width: 20px;
+    color: aliceblue;
+    cursor: pointer;
+    border: none;
+    margin-right: 1.5rem;
 }
