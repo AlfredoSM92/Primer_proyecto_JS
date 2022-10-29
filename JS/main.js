@@ -32,7 +32,6 @@ function identificacion(evento) {
     evento.preventDefault();
     let element = evento.target.classList[1];
     carrito.push(new Item(element, 1));
-    localStorage.setItem("carrito", JSON.stringify(carrito))
     agregar();
 }
 
@@ -66,11 +65,15 @@ function agregar() {
     row.append(data);
 
     data = document.createElement("td");
+    for(element of stock){
+        if(nameItem == element.name){
+            data.innerText = element.price
+        }
+   }
     row.append(data);
 
     table.append(row);
-
-
+    localStorage.setItem("carrito", JSON.stringify(carrito))
 }
 
 //Control de botones de cantidad.
