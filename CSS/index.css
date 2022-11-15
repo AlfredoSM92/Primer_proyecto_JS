@@ -37,6 +37,14 @@ body {
     position: relative;
 }
 
+#div__identification{
+    display: flex;
+    flex-direction: row;
+    align-items:baseline;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
 #logo {
     max-width: 120px;
     min-width: 80px;
@@ -49,16 +57,33 @@ h1 {
     font-size: 2.8rem;
 }
 
+#userName{
+    color: aliceblue;
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+#covidCases{
+    margin-right: 2rem;
+    color: aliceblue;
+    font-size:  1.4rem;
+}
+
+#infoCovid{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
 .cart__menu {
     display: flex;
-    /* justify-content: baseline; */
     position: absolute;
     top: 72%;
     right: 5%;
 }
 
 .fa-solid{
-    
     color: aliceblue;
     font-size: 30px;
     cursor: pointer;
@@ -74,25 +99,18 @@ h1 {
     font-weight: 700;
 }
 
-main {
-    display: flex;
-    /* position: relative; */
-}
-
 #nav__list {
-    min-height: 100vh;
-    width: 30vw;
+    max-height: 20vh;
     background-color: salmon;
     padding: 2rem;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-#nav__list li{
-    margin-top: 200px;
-    margin-bottom: 200px;
+#nav__list ul{
+    display: flex;
+    flex-direction: row;
+    gap: 15rem;
+    justify-content: center;
 }
 
 .product {
@@ -103,12 +121,12 @@ main {
     padding: 1rem;
     margin: 50px 80px;
     width: 300px;
-    height: fit-content;
+    max-height: 500px;
 }
 
 .product__img {
-    width: 150px;
-    height: 150px;
+    max-width: 150px;
+    max-height: 150px;
     object-fit: cover;
     margin: 0 auto;
 }
@@ -117,13 +135,14 @@ main {
     margin: 1rem 0;
 }
 
-.addToCart {
+.addToCart, .cleanAll, .erase {
     background-color: sandybrown;
     border: none;
     font-family: 'Poppins', sans-serif;
     color: aliceblue;
     font-size: 1.2rem;
     cursor: pointer;
+    padding: .3rem;
 }
 
 #checkCart {
@@ -151,6 +170,11 @@ main {
 table {
     margin: 20px auto;
     border: 2px solid coral;
+    background-color: rgb(255, 231, 223);
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    z-index: 1;
 }
 
 th {
@@ -190,4 +214,13 @@ td {
     cursor: pointer;
     border: none;
     margin-right: 1.5rem;
+}
+
+
+.cart__menu:hover table{
+ visibility: visible;
+}
+
+.hidden{
+  visibility: hidden;
 }
